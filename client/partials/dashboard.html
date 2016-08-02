@@ -1,0 +1,23 @@
+<!-- {{user}} -->
+
+<h1>Hi, {{user.name}}</h1>
+<a href = "#/">Log Out</a>
+<a href = "#/new_question">Add a Question</a>
+<div class="container">
+  <table class="table" id="table">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Answers</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="q in questions">
+          <td>{{q.name}}</td>
+          <td>{{q.count}}</td>
+          <td><a href="#/question/{{q._id}}">Show</a> | <a href="#/question/{{q._id}}/new_answer">Answer</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
